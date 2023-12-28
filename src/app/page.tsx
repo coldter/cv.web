@@ -1,5 +1,10 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardBulletPoints,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
@@ -7,11 +12,11 @@ import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
-import { ProjectCard } from "@/components/project-card";
+import { MobileDownloadButton, ProjectCard } from "@/components/project-card";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary,
+  description: RESUME_DATA.summary.join(" "),
 };
 
 export default function Page() {
@@ -21,7 +26,7 @@ export default function Page() {
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+            <p className="max-w-md text-pretty font-mono text-xs text-muted-foreground">
               {RESUME_DATA.about}
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
@@ -87,16 +92,23 @@ export default function Page() {
             </div>
           </div>
 
-          <Avatar className="h-28 w-28">
+          <Avatar className="h-28 w-28 sm:h-32 sm:w-32">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
-            {RESUME_DATA.summary}
-          </p>
+          {RESUME_DATA.summary.map((p, i) => {
+            return (
+              <p
+                key={i}
+                className="text-pretty font-mono text-sm text-muted-foreground"
+              >
+                {p}
+              </p>
+            );
+          })}
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
@@ -106,7 +118,7 @@ export default function Page() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link}>
+                      <a className="hover:underline" href={work?.link || "#"}>
                         {work.company}
                       </a>
 
@@ -127,13 +139,36 @@ export default function Page() {
                     </div>
                   </div>
 
-                  <h4 className="font-mono text-sm leading-none">
+                  <h4 className="font-mono text-sm font-medium italic leading-none">
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {work.description}
-                </CardContent>
+                {work.description.map((d, i) => {
+                  return (
+                    <CardContent className="mt-2 text-xs" key={i}>
+                      {d}
+                    </CardContent>
+                  );
+                })}
+                {work?.bulletPoints?.length && (
+                  <>
+                    <h4 className="mt-3 font-mono text-sm font-semibold leading-none">
+                      Technical highlights:
+                    </h4>
+                    <CardBulletPoints className="mt-2">
+                      {work.bulletPoints.map((bulletPoint, i) => {
+                        return (
+                          <li
+                            className="text-s mt-1 font-mono text-muted-foreground"
+                            key={i}
+                          >
+                            {bulletPoint}
+                          </li>
+                        );
+                      })}
+                    </CardBulletPoints>
+                  </>
+                )}
               </Card>
             );
           })}
@@ -186,6 +221,7 @@ export default function Page() {
       </section>
 
       <CommandMenu
+        resumeDownloadUrl={RESUME_DATA?.resumeDownloadUrl}
         links={[
           {
             url: RESUME_DATA.personalWebsiteUrl,
@@ -197,6 +233,7 @@ export default function Page() {
           })),
         ]}
       />
+      <MobileDownloadButton link={RESUME_DATA.resumeDownloadUrl} />
     </main>
   );
 }

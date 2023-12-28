@@ -6,12 +6,29 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import { DownloadIcon } from "lucide-react";
 
 interface Props {
   title: string;
   description: string;
   tags: readonly string[];
   link?: string;
+}
+
+export function MobileDownloadButton({ link }: { link: string }) {
+  return (
+    <Button
+      className="hover:pointer fixed bottom-5 right-5 shadow-lg sm:hidden"
+      variant="default"
+      size="icon"
+      asChild
+    >
+      <a href={link} target="_blank">
+        <DownloadIcon className="h-8 w-8" />
+      </a>
+    </Button>
+  );
 }
 
 export function ProjectCard({ title, description, tags, link }: Props) {

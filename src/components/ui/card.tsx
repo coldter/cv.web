@@ -68,6 +68,24 @@ const CardContent = React.forwardRef<
 ));
 CardContent.displayName = "CardContent";
 
+const CardBulletPoints = React.forwardRef<
+  HTMLUListElement,
+  React.HTMLAttributes<HTMLUListElement>
+>(({ className, children, title, ...props }, ref) => (
+  <ul
+    ref={ref}
+    className={cn(
+      "my-2 list-disc pl-4 text-sm text-muted-foreground",
+      className,
+    )}
+    {...props}
+  >
+    {children}
+  </ul>
+));
+
+CardBulletPoints.displayName = "CardBulletPoints";
+
 const CardFooter = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -83,4 +101,5 @@ export {
   CardTitle,
   CardDescription,
   CardContent,
+  CardBulletPoints,
 };
