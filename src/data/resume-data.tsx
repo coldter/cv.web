@@ -67,7 +67,7 @@ export const RESUME_DATA = {
       title: "Backend Developer(Node.js)/DevOps",
       // logo: ,
       start: "Jan 2024",
-      end: "Present",
+      end: "Mar 2025",
       description: [""],
       bulletPoints: [
         "Joined as key resource for maintaining and scaling of company's on-demand food delivery platform with large codebase and many entities.",
