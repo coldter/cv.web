@@ -40,7 +40,31 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "1lint",
+      company: "Freelancing",
+      link: "#",
+      badges: ["DevOps", "Node.js", "AI Integration"],
+      title: "Backend Developer & DevOps",
+      // logo: ,
+      start: "Jan 2024",
+      end: "Present",
+      description: [
+        "Provided independent software development and DevOps services to a diverse range of clients, focusing on backend systems, cloud infrastructure, and process automation.",
+      ],
+      bulletPoints: [
+        "Managed end-to-end project lifecycle for various clients, from requirements gathering and solution design to deployment and post-launch support.",
+        "Collaborated with clients as a key resource for maintaining and scaling diverse platforms, including an on-demand food delivery system with a large codebase and numerous entities.",
+        "Leveraged Node.js and its ecosystem to develop robust RESTful APIs and backend services tailored to specific client needs and business logic.",
+        "Developed custom software solutions and automation scripts, including the integration of AI-powered APIs (e.g., for text processing, data enrichment, or intelligent routing) to meet unique client requirements.",
+        "Integrated solutions such as AWS CloudFront, Redis cache, and monitoring services (Sentry, CloudWatch) into client platforms to significantly enhance performance, scalability, and reliability.",
+        "Dockerized diverse services and managed/maintained over 20 servers across various cloud platforms (AWS, DigitalOcean) for multiple client projects, ensuring high availability.",
+        "Built a high-volume PDF generation service using Puppeteer and AWS Lambda for clients, enabling the creation of large, data-driven PDFs from various aggregated sources.",
+        "Provided technical consulting on cloud architecture, security best practices (including assisting with security audits and compliance requirements), and performance optimization strategies.",
+        "Actively maintained comprehensive project documentation, architectural diagrams, and wikis for client engagements to ensure clarity, smooth handovers, and knowledge transfer.",
+        "Utilized the Cloudflare platform extensively (DNS, CDN, WAF, Workers, KV, Pages, etc.) to implement serverless solutions, enhance application security, and improve global content delivery for various client projects.",
+      ],
+    },
+    {
+      company: "Rbian Infotech",
       link: "#",
       badges: ["Node"],
       title: "Backed Developer",
@@ -58,26 +82,6 @@ export const RESUME_DATA = {
         "Worked on various POCs for new feature and for project development from the ground up with high focus deliverability and fast iteration.",
         "Help in implementing and troubleshoot CI/CD pipelines for various projects with code review systems.",
         "Utilized docker and devcontainer to standardize development environment across team member, along with linters like ESLint and prettier to maintain code quality and consistency across projects.",
-      ],
-    },
-    {
-      company: "Ananta Security Lab",
-      link: "#",
-      badges: ["DevOps"],
-      title: "Backend Developer(Node.js)/DevOps",
-      // logo: ,
-      start: "Jan 2024",
-      end: "Mar 2025",
-      description: [""],
-      bulletPoints: [
-        "Joined as key resource for maintaining and scaling of company's on-demand food delivery platform with large codebase and many entities.",
-        "Utilized noje.js and related ecosystem to build RESTful APIs for various services.",
-        "Integrated solutions like AWS CloudFront, Redis cache and monitoring services like sentry and CloudWatch in existing platform to improve performance and reliability.",
-        "Dockerized various services and managed and maintained 20 plus servers on various platforms.",
-        "Built a high volume PDF generation service using puppeteer and AWS lambda to generate large PDFs with gathered data from various sources.",
-        "Helped companies to conduct various security audits and compliance.",
-        "Actively maintained project documentations and wikis.",
-        "Utilized Cloudflare platform with DNS, CND, waf, workers, KV, pages etc. to fulfill many projects serverless requirements.",
       ],
     },
   ],
@@ -107,17 +111,17 @@ export const RESUME_DATA = {
     "Socket.io",
     "CI/CD",
     "GitHub Actions",
+    "AI/ML API Integration", // Added skill
   ],
   projects: [
     {
-      title: "Mostly Experimentation",
-      techStack: ["Everything"],
+      title: "Kommit - CLI Tool",
+      techStack: ["Golang", "Git", "CLI", "Cloudflare AI"],
       description:
-        "For side stuff, I like to experiment backend and could-native stuffs that sparks my interest...",
-      // logo: ConsultlyLogo,
+        "A command-line interface tool to help enforce conventional commit messages or streamline the git commit process.",
       link: {
         label: "GitHub",
-        href: "https://github.com/coldter?tab=stars",
+        href: "https://github.com/coldter/kommit",
       },
     },
     {
@@ -137,6 +141,17 @@ export const RESUME_DATA = {
       link: {
         label: "weather app",
         href: "https://weather.p.kuldeep.tech",
+      },
+    },
+    {
+      title: "Mostly Experimentation",
+      techStack: ["Everything"],
+      description:
+        "For side stuff, I like to experiment backend and could-native stuffs that sparks my interest...",
+      // logo: ConsultlyLogo,
+      link: {
+        label: "GitHub",
+        href: "https://github.com/coldter?tab=stars",
       },
     },
   ],
