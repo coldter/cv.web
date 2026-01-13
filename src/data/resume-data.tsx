@@ -111,7 +111,7 @@ export const RESUME_DATA = {
 		"Git",
 		"Linux",
 		"AWS",
-    "Google Cloud Platform",
+		"Google Cloud Platform",
 		"Docker",
 		"MongoDB",
 		"Puppeteer",
@@ -129,6 +129,16 @@ export const RESUME_DATA = {
 		"AI/ML API Integration", // Added skill
 	],
 	projects: [
+		{
+			title: "Tide Info",
+			techStack: ["TypeScript", "Bun", "Monorepo", "serverless", "sqlite", "stormglass API/Openweather API"],
+			description:
+				"A comprehensive tide tracking application providing real-time tide predictions, weather conditions, and smart alerts for coastal locations worldwide.",
+			link: {
+				label: "GitHub",
+				href: "https://github.com/coldter/tide-info",
+			},
+		},
 		{
 			title: "Kommit - CLI Tool",
 			techStack: ["Golang", "Git", "CLI", "Cloudflare AI"],
@@ -156,17 +166,6 @@ export const RESUME_DATA = {
 			link: {
 				label: "weather app",
 				href: "https://weather.p.kuldeep.tech",
-			},
-		},
-		{
-			title: "Mostly Experimentation",
-			techStack: ["Everything"],
-			description:
-				"For side stuff, I like to experiment backend and could-native stuffs that sparks my interest...",
-			// logo: ConsultlyLogo,
-			link: {
-				label: "GitHub",
-				href: "https://github.com/coldter?tab=stars",
 			},
 		},
 	],

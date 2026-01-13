@@ -92,10 +92,10 @@ export default function Page() {
             </div>
           </div>
 
-          <Avatar className="h-28 w-28 sm:h-32 sm:w-32">
+          {/* <Avatar className="h-28 w-28 sm:h-32 sm:w-32">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-          </Avatar>
+          </Avatar> */}
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
