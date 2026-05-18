@@ -63,7 +63,7 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\fontsize{11.5pt}{14pt}\selectfont{
+  \item\fontsize{12.5pt}{15pt}\selectfont{
     {#1 \vspace{-2pt}}
   }
 }
@@ -71,7 +71,7 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\fontsize{13pt}{15pt}\selectfont #1} & #2 \\
+      \textbf{\fontsize{14pt}{16pt}\selectfont #1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
@@ -110,7 +110,7 @@
 \section{About}
 \begin{adjustwidth}{8pt}{4pt}
 	\hspace{35pt}
-	\small{I’m a passionate software developer with a deep interest in cloud-native technologies and information security, focused on building robust, intelligent, and secure systems. Fluent in AI-driven development — comfortable parachuting into unfamiliar codebases, modernizing aging stacks, and shipping features in a fraction of the usual timeline. Willing to work remotely with teams to embrace new challenges and achieve success.}
+	{\fontsize{12pt}{14pt}\selectfont I’m a passionate software developer with a deep interest in cloud-native technologies and information security, focused on building robust, intelligent, and secure systems. Fluent in AI-driven development — comfortable parachuting into unfamiliar codebases, modernizing aging stacks, and shipping features in a fraction of the usual timeline. Willing to work remotely with teams to embrace new challenges and achieve success.}
 \end{adjustwidth}
 
 %-----------AI-DRIVEN DEVELOPMENT-----------
@@ -156,9 +156,7 @@
 	\resumeItemListStart
 	\resumeItem{Built the virtual card provisioning backend for Assure PAT — test cards issued in under 30 seconds with 1,000+ reuses and automatic inventory return on test completion.}
 	\resumeItem{Integrated AWS KMS with a zero-knowledge design so testers never access raw PAN or CVV; encryption enforced across all card lifecycle events and sensitive data flows.}
-	\resumeItem{Built real-time APDU command capture and transaction logging pipelines for Assure PAT, enabling structured debugging workflows and accelerating issue resolution.}
 	\resumeItem{Implemented comprehensive audit logging across card events, provisioning actions, and transactions, achieving full audit coverage for compliance, traceability, and certification workflows.}
-	\resumeItem{Developed the pre-transaction rule enforcement engine for Ayris Pay, evaluating merchant category, geographic, and usage controls before requests reach the payment network.}
 	\resumeItem{Architected the shared card access backend for Ayris Pay, letting cardholders distribute spending access to family or team members while keeping primary card credentials fully isolated.}
 	\resumeItem{Implemented data residency and localization controls so transaction processing adhered to regional regulatory requirements across target markets.}
 	\resumeItemListEnd
@@ -172,7 +170,7 @@
 {Ananta Security Lab}{Gujarat, India}
 \resumeItem{
 	\resumeItemListStart
-	\resumeItem{Maintained and scaled a high-traffic, on-demand food delivery platform as a key client-side resource.}
+	\resumeItem{Maintained and scaled a high-traffic, on-demand food delivery platform as a key resource.}
 	\resumeItem{Conducted security audits and compliance assessments for multiple client organizations.}
 	\resumeItem{Developed a real-time attendance system utilizing high-speed face recognition to track personnel and generate automated analytics on presence, punctuality, and historical trends.}
 	\resumeItem{Engineered an end-to-end computer vision pipeline to automatically recognize and extract digital meter readings from images, leveraging a custom-trained OCR model to automate data collection.}
@@ -252,7 +250,7 @@
 \AtBeginShipoutNext{%
 	\AtBeginShipoutUpperLeft{%
 		\put(35,-835){%
-			\parbox{\textwidth}{\fontsize{6.5}{1}\selectfont
+			\parbox{\textwidth}{\fontsize{8}{1}\selectfont
 				\textit{I agree to the processing of personal data provided in this document for the purpose of the recruitment process in accordance with the provisions of the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 under the Information Technology Act, 2000, and in agreement with any other applicable laws and regulations in India pertaining to the protection of personal data.}}%
 		}%
 	}%
