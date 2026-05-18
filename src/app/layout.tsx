@@ -9,7 +9,7 @@ import { RESUME_DATA } from "@/data/resume-data";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(RESUME_DATA.personalWebsiteUrl),
+  metadataBase: new URL("https://cv.kuldeep.tech"),
   title: {
     default: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
     template: `%s | ${RESUME_DATA.name}`,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: RESUME_DATA.personalWebsiteUrl,
+    url: 'https://cv.kuldeep.tech',
     siteName: `${RESUME_DATA.name}'s CV`,
     title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
     description: RESUME_DATA.summary.join(" "),
