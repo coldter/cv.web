@@ -1,0 +1,261 @@
+%-------------------------
+% Author: Kuldeep
+% My modified version of resume in LaTeX,
+% based on https://github.com/jakegut/resume
+% License : MIT
+%------------------------
+
+\newcommand{\myName}{Kuldeep Parmar}
+\newcommand{\myPhoneNumber}{6355720306}
+\newcommand{\myEmail}{hey@kuldeep.tech}
+\newcommand{\myGithub}{github.com/coldter}
+\newcommand{\myLocation}{Rajkot, Gujarat}
+\newcommand{\myCityTzSlug}{rajkot}
+\newcommand{\myWebsite}{kuldeep.tech}
+
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{changepage}
+\usepackage{atbegshi}
+\usepackage[a4paper,margin=0.85in,footskip=0.0in]{geometry}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+\usepackage[sfdefault]{roboto}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{0pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\fontsize{11.5pt}{14pt}\selectfont{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\fontsize{13pt}{15pt}\selectfont #1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+	\textbf{\Huge \scshape \myName} \\ \vspace{5pt}
+	\small
+	{\expandafter\href\expandafter{tel:+91\myPhoneNumber}{\underline{+91 \myPhoneNumber}}} $|$
+	{\expandafter\href\expandafter{mailto:\myEmail}{\underline{\myEmail}}} $|$
+	{\expandafter\href\expandafter{https://\myWebsite}{\underline{\myWebsite}}} $|$
+	{\expandafter\href\expandafter{https://\myGithub}{\underline{\myGithub}}} $|$
+	{\expandafter\href\expandafter{https://www.timeanddate.com/time/zone/india/\myCityTzSlug}{\underline{\myLocation}}}
+\end{center}
+
+%----------ABOUT----------
+
+\section{About}
+\begin{adjustwidth}{8pt}{4pt}
+	\hspace{35pt}
+	\small{I’m a passionate software developer with a deep interest in cloud-native technologies and information security, focused on building robust, intelligent, and secure systems. Fluent in AI-driven development — comfortable parachuting into unfamiliar codebases, modernizing aging stacks, and shipping features in a fraction of the usual timeline. Willing to work remotely with teams to embrace new challenges and achieve success.}
+\end{adjustwidth}
+
+%-----------AI-DRIVEN DEVELOPMENT-----------
+\section{AI-Driven Development}
+\resumeSubHeadingListStart
+\resumeItem{
+	\resumeItemListStart
+	\resumeItem{\textbf{Codebase fluency} — architecture notes, dependency maps, and behavior audits of unfamiliar systems produced in days, not weeks.}
+	\resumeItem{\textbf{Modernization \& migration} — framework upgrades, runtime moves, and cross-stack ports via strangler-fig rollouts with characterization-test safety nets.}
+	\resumeItem{\textbf{Rapid feature delivery} — vertical slices shipped into existing systems without regressions; commit-level review loops over monolithic PRs.}
+	\resumeItem{\textbf{Custom agents \& workflows} — task-specific sub-agents wired into a team's dev cycle: CI review (conventions beyond lint, architectural-drift flags, senior-reviewer-style PR comments), observability-driven debugging (correlate logs, traces, and metrics across services), codebase-wide refactors, and more — built per project.}
+	\resumeItemListEnd
+}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+
+% Freelancing
+\resumeSubHeadingListStart
+\resumeSubheading
+{Backend Developer \& DevOps}{Jan 2024 -- Present}
+{Freelancing}{Remote}
+\resumeItem{
+	\resumeItemListStart
+	\resumeItem{Leveraged Node.js and its ecosystem to develop robust RESTful APIs and backend services tailored to specific client needs and business logic.}
+	\resumeItem{Delivered AI-assisted legacy modernization for client codebases — framework upgrades, runtime moves, and cross-stack ports shipped with parallel AI coding agents on the slow work; architecture and final review stayed mine.}
+	\resumeItem{Built custom automation by integrating AI-powered APIs for text processing, data enrichment, and intelligent routing.}
+	\resumeItem{Enhanced platform performance and reliability by integrating AWS CloudFront, Redis, Sentry, and CloudWatch.}
+	\resumeItem{Dockerized services and managed 20+ servers on AWS and DigitalOcean, ensuring high availability.}
+	\resumeItem{Built a high-volume PDF generation service on AWS Lambda using Puppeteer, producing large, data-driven PDFs from aggregated client sources.}
+	\resumeItem{Utilized the Cloudflare platform extensively (DNS, CDN, WAF, Workers, KV, Pages, etc.) to implement serverless solutions, enhance application security, and improve global content delivery for various client projects.}
+	\resumeItemListEnd
+}
+\resumeSubHeadingListEnd
+
+% Ayris Global
+\resumeSubHeadingListStart
+\resumeSubheading
+{Backend Engineer}{Sep 2025 -- Present}
+{Ayris Global (Part-Time)}{Remote}
+\resumeItem{
+	\resumeItemListStart
+	\resumeItem{Built the virtual card provisioning backend for Assure PAT — test cards issued in under 30 seconds with 1,000+ reuses and automatic inventory return on test completion.}
+	\resumeItem{Integrated AWS KMS with a zero-knowledge design so testers never access raw PAN or CVV; encryption enforced across all card lifecycle events and sensitive data flows.}
+	\resumeItem{Built real-time APDU command capture and transaction logging pipelines for Assure PAT, enabling structured debugging workflows and accelerating issue resolution.}
+	\resumeItem{Implemented comprehensive audit logging across card events, provisioning actions, and transactions, achieving full audit coverage for compliance, traceability, and certification workflows.}
+	\resumeItem{Developed the pre-transaction rule enforcement engine for Ayris Pay, evaluating merchant category, geographic, and usage controls before requests reach the payment network.}
+	\resumeItem{Architected the shared card access backend for Ayris Pay, letting cardholders distribute spending access to family or team members while keeping primary card credentials fully isolated.}
+	\resumeItem{Implemented data residency and localization controls so transaction processing adhered to regional regulatory requirements across target markets.}
+	\resumeItemListEnd
+}
+\resumeSubHeadingListEnd
+
+% Ananta Security Lab
+\resumeSubHeadingListStart
+\resumeSubheading
+{Backend Developer}{Jan 2024 -- Feb 2025}
+{Ananta Security Lab}{Gujarat, India}
+\resumeItem{
+	\resumeItemListStart
+	\resumeItem{Maintained and scaled a high-traffic, on-demand food delivery platform as a key client-side resource.}
+	\resumeItem{Conducted security audits and compliance assessments for multiple client organizations.}
+	\resumeItem{Developed a real-time attendance system utilizing high-speed face recognition to track personnel and generate automated analytics on presence, punctuality, and historical trends.}
+	\resumeItem{Engineered an end-to-end computer vision pipeline to automatically recognize and extract digital meter readings from images, leveraging a custom-trained OCR model to automate data collection.}
+	\resumeItem{Developed various Proof-of-Concepts (POCs) for integrating emerging AI technologies into the existing product ecosystem, emphasizing fast iteration and delivery.}
+	\resumeItemListEnd
+}
+\resumeSubHeadingListEnd
+
+% Rbian Infotech
+\resumeSubHeadingListStart
+\resumeSubheading
+{Backend Developer}{Jan 2022 -- Dec 2023}
+{Rbian Infotech}{Gujarat, India}
+\resumeItem{
+	\resumeItemListStart
+	\resumeItem{Engineered scalable backend solutions for high-traffic cloud environments using Node.js, TypeScript, MongoDB, and PostgreSQL.}
+	\resumeItem{Provisioned and managed core AWS infrastructure, including EC2, Load Balancers, VPC, RDS, and S3.}
+	\resumeItem{Built a Git-based documentation system to streamline collaboration and reduce new-engineer onboarding time.}
+	\resumeItem{Migrated a legacy ES5 codebase to TypeScript and implemented Jest tests, improving code maintainability and development speed.}
+	\resumeItem{Implemented and troubleshot CI/CD pipelines with integrated code review systems to automate deployments.}
+	\resumeItem{Standardized dev environments across the team via Docker and devcontainers; enforced code quality with ESLint and Prettier.}
+	\resumeItemListEnd
+}
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Atmiya University}{Gujarat, India}
+{Bachelor Of Science in Information Tech}{2019 -- 2022}
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+		\textbf{Technologies}{:
+			Golang,
+			TypeScript,
+			Python,
+			Node.js,
+			Deno,
+			Git,
+			Linux,
+			AWS,
+			GCP,
+			Docker,
+			MongoDB,
+			PostgreSQL,
+			MySQL,
+			Redis,
+			Websockets,
+			Socket.io,
+			CI/CD,
+			GitHub Actions,
+			AI/ML API Integration
+			} \\
+		\textbf{Interests}{:
+			Information Security,
+			Cloud Computing,
+			DevOps,
+			Serverless,
+			Distributed Systems,
+			Open Source
+			} \\
+		% \textbf{Miscellaneous:}{
+		% 	\underline{Born:} November 2000
+		% 	} \\
+	}}
+\end{itemize}
+
+%-------------------------------------------
+
+%           -FOOTER-
+
+\AtBeginShipoutNext{%
+	\AtBeginShipoutUpperLeft{%
+		\put(35,-835){%
+			\parbox{\textwidth}{\fontsize{6.5}{1}\selectfont
+				\textit{I agree to the processing of personal data provided in this document for the purpose of the recruitment process in accordance with the provisions of the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 under the Information Technology Act, 2000, and in agreement with any other applicable laws and regulations in India pertaining to the protection of personal data.}}%
+		}%
+	}%
+}
+
+\end{document}

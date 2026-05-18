@@ -7,21 +7,47 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { MobileDownloadButton, ProjectCard } from "@/components/project-card";
+import { generateResumeStructuredData } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
   description: RESUME_DATA.summary.join(" "),
+  openGraph: {
+    title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
+    description: RESUME_DATA.summary.join(" "),
+    type: "profile",
+    locale: "en_US",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: `${RESUME_DATA.name}'s profile`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
+    description: RESUME_DATA.summary.join(" "),
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Page() {
+  const structuredData = generateResumeStructuredData();
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
         <div>
           <div className="space-y-1.5">
@@ -39,10 +65,10 @@ export default function Page() {
                 {RESUME_DATA.location}
               </a>
             </p>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+            <div className="flex gap-x-1.5 pt-1 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
-                  className="h-8 w-8"
+                  className="size-9 sm:size-8"
                   variant="outline"
                   size="icon"
                   asChild
@@ -54,7 +80,7 @@ export default function Page() {
               ) : null}
               {RESUME_DATA.contact.tel ? (
                 <Button
-                  className="h-8 w-8"
+                  className="size-9 sm:size-8"
                   variant="outline"
                   size="icon"
                   asChild
@@ -67,7 +93,7 @@ export default function Page() {
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
-                  className="h-8 w-8"
+                  className="size-9 sm:size-8"
                   variant="outline"
                   size="icon"
                   asChild
@@ -105,19 +131,45 @@ export default function Page() {
             );
           })}
         </Section>
+        <Section className="print-no-break">
+          <h2 className="text-xl font-bold">AI-Driven Development</h2>
+          <p className="max-w-prose text-pretty font-mono text-xs leading-relaxed text-foreground/90">
+            {RESUME_DATA.aiPractice.pitch}
+          </p>
+          <dl className="mt-1 grid gap-x-8 gap-y-3 border-t border-foreground/25 pt-3 sm:grid-cols-2 print:border-foreground/50">
+            {RESUME_DATA.aiPractice.highlights.map((item, i) => (
+              <div key={item.title} className="flex gap-x-3">
+                <span
+                  aria-hidden
+                  className="select-none pt-px font-mono text-[10px] font-medium leading-relaxed tracking-widest text-muted-foreground/60"
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="flex-1">
+                  <dt className="font-mono text-xs font-semibold text-foreground">
+                    {item.title}
+                  </dt>
+                  <dd className="mt-0.5 text-pretty font-mono text-xs leading-snug text-muted-foreground">
+                    {item.body}
+                  </dd>
+                </div>
+              </div>
+            ))}
+          </dl>
+        </Section>
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={work.company}>
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                  <div className="flex flex-col gap-y-1 text-base sm:flex-row sm:items-center sm:justify-between sm:gap-x-2">
+                    <h3 className="inline-flex flex-wrap items-center gap-x-1 gap-y-1 font-semibold leading-tight">
                       <a className="hover:underline" href={work?.link || "#"}>
                         {work.company}
                       </a>
 
-                      <span className="inline-flex gap-x-1">
+                      <span className="inline-flex flex-wrap gap-1">
                         {work.badges.map((badge) => (
                           <Badge
                             variant="secondary"
@@ -129,7 +181,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-600">
+                    <div className="text-xs tabular-nums text-gray-600 sm:text-sm sm:whitespace-nowrap">
                       {work.start} - {work.end}
                     </div>
                   </div>
@@ -174,11 +226,11 @@ export default function Page() {
             return (
               <Card key={education.school}>
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
+                  <div className="flex flex-col gap-y-1 text-base sm:flex-row sm:items-center sm:justify-between sm:gap-x-2">
+                    <h3 className="font-semibold leading-tight">
                       {education.school}
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-600">
+                    <div className="text-xs tabular-nums text-gray-600 sm:text-sm sm:whitespace-nowrap">
                       {education.start} - {education.end}
                     </div>
                   </div>

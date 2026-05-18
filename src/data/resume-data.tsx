@@ -38,6 +38,28 @@ export const RESUME_DATA = {
       end: "2022",
     },
   ],
+  aiPractice: {
+    pitch:
+      "Deeply fluent in AI-driven development — comfortable parachuting into unfamiliar codebases, modernizing aging stacks, and landing features in a fraction of the usual timeline. The slow work runs in parallel; architecture, design calls, and the diffs that ship stay mine.",
+    highlights: [
+      {
+        title: "Codebase comprehension",
+        body: "Map an unfamiliar system — endpoints, shared state, what's actually called from where — in days instead of weeks. Code nobody fully understands becomes something the team can reason about again.",
+      },
+      {
+        title: "Modernization & migration",
+        body: "Backend framework upgrades, runtime moves, and cross-stack ports (PHP → Node, Python → Go, Java → Go). Strangler-fig rollouts with characterization tests as the safety net — no Big Bang cutovers.",
+      },
+      {
+        title: "Fast feature turnaround",
+        body: "Land vertical slices through an existing system without destabilizing what's already there. Drop into a project mid-quarter, ship the next one or two features, hand back something maintainable.",
+      },
+      {
+        title: "High-trust delivery",
+        body: "Every diff reviewed before it ships — compiles ≠ passes ≠ correct ≠ shippable. The goal isn't a clever migration; it's a codebase the team can keep working on after I move on.",
+      },
+    ],
+  },
   work: [
     {
       company: "Freelancing",
@@ -51,13 +73,12 @@ export const RESUME_DATA = {
         "Provided independent software development and DevOps services to a diverse range of clients, focusing on backend systems, cloud infrastructure, and process automation.",
       ],
       bulletPoints: [
-        "Managed end-to-end project lifecycle for various clients, from requirements gathering and solution design to deployment and post-launch support.",
+        "Delivered AI-assisted legacy modernization across client codebases — backend framework upgrades, runtime moves, and cross-stack ports shipped with parallel AI coding agents handling codebase comprehension, test backfill, and repetitive translation, while I owned architecture, design calls, and final review.",
         "Leveraged Node.js and its ecosystem to develop robust RESTful APIs and backend services tailored to specific client needs and business logic.",
         "Developed custom software solutions and automation scripts, including the integration of AI-powered APIs (e.g., for text processing, data enrichment, or intelligent routing) to meet unique client requirements.",
         "Integrated solutions such as AWS CloudFront, Redis cache, and monitoring services (Sentry, CloudWatch) into client platforms to significantly enhance performance, scalability, and reliability.",
         "Dockerized diverse services and managed/maintained over 20 servers across various cloud platforms (AWS, DigitalOcean) for multiple client projects, ensuring high availability.",
         "Built a high-volume PDF generation service using Puppeteer and AWS Lambda for clients, enabling the creation of large, data-driven PDFs from various aggregated sources.",
-        "Provided technical consulting on cloud architecture, security best practices (including assisting with security audits and compliance requirements), and performance optimization strategies.",
         "Utilized the Cloudflare platform extensively (DNS, CDN, WAF, Workers, KV, Pages, etc.) to implement serverless solutions, enhance application security, and improve global content delivery for various client projects.",
       ],
     },
@@ -151,6 +172,25 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "Vync",
+      techStack: [
+        "React Native",
+        "Expo",
+        "Android TV",
+        "Convex",
+        "TanStack Start",
+        "Cloudflare R2",
+        "Turborepo",
+        "Bun",
+      ],
+      description:
+        "A managed media publishing system that pairs a phone controller with multiple Android TV displays for frame-accurate synchronized playback of images, videos, and slideshows.",
+      link: {
+        label: "kuldeep.tech",
+        href: "https://kuldeep.tech/work/vync/",
+      },
+    },
+    {
       title: "Tide Info",
       techStack: [
         "TypeScript",
@@ -175,6 +215,16 @@ export const RESUME_DATA = {
       link: {
         label: "GitHub",
         href: "https://github.com/coldter/kommit",
+      },
+    },
+    {
+      title: "Commit Canvas",
+      techStack: ["Golang", "CLI", "Bubble Tea", "Git Plumbing"],
+      description:
+        "A CLI that renders custom pixel-art messages onto your GitHub contribution graph by orchestrating strategically backdated commits across the 53×7 calendar grid.",
+      link: {
+        label: "kuldeep.tech",
+        href: "https://kuldeep.tech/work/commit-canvas/",
       },
     },
     {

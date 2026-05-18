@@ -19,13 +19,14 @@ interface Props {
 export function MobileDownloadButton({ link }: { link: string }) {
   return (
     <Button
-      className="hover:pointer fixed bottom-5 right-5 shadow-lg sm:hidden"
+      className="fixed bottom-5 right-5 size-12 rounded-full shadow-lg transition-shadow hover:shadow-xl sm:hidden print:hidden"
       variant="default"
       size="icon"
+      aria-label="Download resume PDF"
       asChild
     >
-      <a href={link} target="_blank">
-        <DownloadIcon className="h-8 w-8" />
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <DownloadIcon className="h-5 w-5" />
       </a>
     </Button>
   );
@@ -41,6 +42,7 @@ export function ProjectCard({ title, description, tags, link }: Props) {
               <a
                 href={link}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 hover:underline"
               >
                 {title}{" "}
