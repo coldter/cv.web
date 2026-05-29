@@ -40,23 +40,23 @@ export const RESUME_DATA = {
   ],
   aiPractice: {
     pitch:
-      "Deeply fluent in AI-driven development — comfortable parachuting into unfamiliar codebases, modernizing aging stacks, and landing features in a fraction of the usual timeline. The slow work runs in parallel; architecture, design calls, and the diffs that ship stay mine.",
+      "Working with AI tools every day means dropping into a codebase I've never seen, getting through an aging stack, and shipping features faster than the usual estimate. The AI grinds through the slow parts; the architecture, the design calls, and the code that actually ships stay with me.",
     highlights: [
       {
         title: "Codebase comprehension",
-        body: "Map an unfamiliar system — endpoints, shared state, what's actually called from where — in days instead of weeks. Code nobody fully understands becomes something the team can reason about again.",
+        body: "Mapping an unfamiliar system takes days instead of weeks: the endpoints, the shared state, what actually calls what. Code nobody on the team fully understood becomes something they can reason about again.",
       },
       {
         title: "Modernization & migration",
-        body: "Backend framework upgrades, runtime moves, and cross-stack ports (PHP → Node, Python → Go, Java → Go). Strangler-fig rollouts with characterization tests as the safety net — no Big Bang cutovers.",
+        body: "Backend framework upgrades, runtime moves, and cross-stack ports. These roll out strangler-fig style, with characterization tests covering the old behavior, so there's never a big-bang cutover.",
       },
       {
         title: "Fast feature turnaround",
-        body: "Land vertical slices through an existing system without destabilizing what's already there. Drop into a project mid-quarter, ship the next one or two features, hand back something maintainable.",
+        body: "Vertical slices land through an existing system without breaking what already works. Join a project mid-quarter, ship the next feature or two, hand back code the team can maintain.",
       },
       {
         title: "High-trust delivery",
-        body: "Every diff reviewed before it ships — compiles ≠ passes ≠ correct ≠ shippable. The goal isn't a clever migration; it's a codebase the team can keep working on after I move on.",
+        body: "Every diff gets reviewed before it ships. Compiling isn't passing, passing isn't correct, and correct isn't shippable. The aim isn't a clever migration; it's a codebase the team can keep working on after I'm gone.",
       },
     ],
   },
