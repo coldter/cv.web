@@ -89,7 +89,7 @@ export const RESUME_DATA = {
       title: "Backend Engineer",
       // logo: ,
       start: "Sep 2025",
-      end: "Present",
+      end: "Jun 2026",
       description: [
         "Working part-time as a backend engineer on payment infrastructure products, contributing to Assure PAT and Ayris Pay — platforms that modernize payment acceptance testing, virtual card lifecycle management, and control-first mobile wallet infrastructure.",
       ],
@@ -247,5 +247,5 @@ export const RESUME_DATA = {
       },
     },
   ],
-  resumeDownloadUrl: "https://kuldeep.tech/pdfs/resume.pdf",
+  resumeDownloadUrl: "https://cv.kuldeep.tech/resume.pdf",
 } as const;

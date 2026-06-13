@@ -49,6 +49,21 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: "/:path*.pdf",
+        headers: [
+          { key: "Content-Type", value: "application/pdf" },
+          {
+            key: "Content-Disposition",
+            value: 'inline; filename="Kuldeep-Parmar-Resume.pdf"',
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, must-revalidate",
+          },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+        ],
+      },
     ];
   },
 };
