@@ -172,6 +172,16 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "Slopnote RAG",
+      techStack: ["AI SDK", "PG Vector", "Cloudflare Workers", "AI Gateway"],
+      description:
+        "Retrieval-augmented chat backend, built on Cloudflare Workers, Hono, and Postgres (pgvector).",
+      link: {
+        label: "slopnotes.kuldeep.tech",
+        href: "https://github.com/coldter/slopnote-rag",
+      },
+    },
+    {
       title: "Vync",
       techStack: [
         "React Native",
