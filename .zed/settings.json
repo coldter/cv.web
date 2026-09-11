@@ -1,0 +1,50 @@
+// Project-local Zed settings.
+//
+// Biome is disabled for this repo. Formatting and linting are handled by
+// Prettier + ESLint/oxlint (see package.json).
+//
+// `language_servers` overrides replace Zed's defaults entirely, so the
+// default servers for each language are repeated here with `!biome` added.
+{
+  "languages": {
+    "Astro": {
+      "language_servers": ["astro-language-server", "!biome", "..."]
+    },
+    "CSS": {
+      "language_servers": ["!biome", "..."]
+    },
+    "GraphQL": {
+      "language_servers": ["!biome", "..."]
+    },
+    "HTML": {
+      "language_servers": ["!biome", "..."]
+    },
+    "JavaScript": {
+      "language_servers": ["!typescript-language-server", "vtsls", "!biome", "..."]
+    },
+    "JSON": {
+      "language_servers": ["!biome", "..."]
+    },
+    "JSONC": {
+      "language_servers": ["!biome", "..."]
+    },
+    "JSX": {
+      "language_servers": ["!biome", "..."]
+    },
+    "Svelte": {
+      "language_servers": ["svelte-language-server", "!biome", "..."]
+    },
+    "TSX": {
+      "language_servers": ["!typescript-language-server", "vtsls", "!biome", "..."]
+    },
+    "TypeScript": {
+      "language_servers": ["!typescript-language-server", "vtsls", "!biome", "..."]
+    },
+    "Vue.js": {
+      "language_servers": ["vue-language-server", "vtsls", "!biome", "..."]
+    },
+    "XML": {
+      "language_servers": ["!biome", "..."]
+    }
+  }
+}

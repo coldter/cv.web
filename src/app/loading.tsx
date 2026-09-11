@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <div className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
+    <div className="relative container mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
       <div className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
         <div className="space-y-3">
           <div className="h-8 w-48 animate-pulse rounded bg-gray-200" />

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: 'https://cv.kuldeep.tech',
+    url: "https://cv.kuldeep.tech",
     siteName: `${RESUME_DATA.name}'s CV`,
     title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
     description: RESUME_DATA.summary.join(" "),

@@ -40,23 +40,23 @@ export const RESUME_DATA = {
   ],
   aiPractice: {
     pitch:
-      "Working with AI tools every day means dropping into a codebase I've never seen, getting through an aging stack, and shipping features faster than the usual estimate. The AI grinds through the slow parts; the architecture, the design calls, and the code that actually ships stay with me.",
+      "I'm at my best in codebases I've never seen, especially the ones that have been aging for a while. I use AI agents every day to get through the slow, mechanical work; the architecture, the design calls, and the code that ships stay with me.",
     highlights: [
       {
-        title: "Codebase comprehension",
-        body: "Mapping an unfamiliar system takes days instead of weeks: the endpoints, the shared state, what actually calls what. Code nobody on the team fully understood becomes something they can reason about again.",
+        title: "Reading unfamiliar code",
+        body: "Mapping an unfamiliar system takes me days instead of weeks: the endpoints, the shared state, what calls what. Code nobody on the team fully understood becomes something they can reason about again.",
       },
       {
-        title: "Modernization & migration",
-        body: "Backend framework upgrades, runtime moves, and cross-stack ports. These roll out strangler-fig style, with characterization tests covering the old behavior, so there's never a big-bang cutover.",
+        title: "Modernizing aging stacks",
+        body: "I've done backend framework upgrades, runtime moves, and cross-stack ports. I roll them out strangler-fig style, with characterization tests covering the old behavior, so there's never a big-bang cutover.",
       },
       {
-        title: "Fast feature turnaround",
-        body: "Vertical slices land through an existing system without breaking what already works. Join a project mid-quarter, ship the next feature or two, hand back code the team can maintain.",
+        title: "Shipping features",
+        body: "I join projects mid-quarter and ship the next feature or two as vertical slices, without breaking what already works. I hand back code the team can maintain, usually ahead of the estimate.",
       },
       {
-        title: "High-trust delivery",
-        body: "Every diff gets reviewed before it ships. Compiling isn't passing, passing isn't correct, and correct isn't shippable. The aim isn't a clever migration; it's a codebase the team can keep working on after I'm gone.",
+        title: "Reviewing the diff",
+        body: "Nothing ships without a read-through, mine included. Green tests aren't proof the change is correct or ready to ship; I sign off on that myself. I want to leave behind a codebase the team can keep working on after I'm gone.",
       },
     ],
   },

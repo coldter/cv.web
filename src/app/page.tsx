@@ -1,4 +1,3 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Card,
   CardHeader,
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
 export default function Page() {
   const structuredData = generateResumeStructuredData();
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
+    <main className="relative container mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -52,10 +51,10 @@ export default function Page() {
         <div>
           <div className="space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="text-pretty font-mono text-xs text-muted-foreground">
+            <p className="text-muted-foreground font-mono text-xs text-pretty">
               {RESUME_DATA.about}
             </p>
-            <p className="items-center text-pretty font-mono text-xs text-muted-foreground">
+            <p className="text-muted-foreground items-center font-mono text-xs text-pretty">
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                 href={RESUME_DATA.locationLink}
@@ -65,7 +64,7 @@ export default function Page() {
                 {RESUME_DATA.location}
               </a>
             </p>
-            <div className="flex gap-x-1.5 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+            <div className="text-muted-foreground flex gap-x-1.5 pt-1 font-mono text-sm print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
                   className="size-9 sm:size-8"
@@ -104,7 +103,7 @@ export default function Page() {
                 </Button>
               ))}
             </div>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
+            <div className="text-muted-foreground hidden flex-col gap-x-1 font-mono text-sm print:flex">
               {RESUME_DATA.contact.email ? (
                 <a href={`mailto:${RESUME_DATA.contact.email}`}>
                   <span className="underline">{RESUME_DATA.contact.email}</span>
@@ -124,7 +123,7 @@ export default function Page() {
             return (
               <p
                 key={i}
-                className="text-pretty font-mono text-sm text-muted-foreground"
+                className="text-muted-foreground font-mono text-sm text-pretty"
               >
                 {p}
               </p>
@@ -133,23 +132,23 @@ export default function Page() {
         </Section>
         <Section className="print-no-break">
           <h2 className="text-xl font-bold">AI-Driven Development</h2>
-          <p className="max-w-prose text-pretty font-mono text-xs leading-relaxed text-foreground/90">
+          <p className="text-foreground/90 max-w-prose font-mono text-xs leading-relaxed text-pretty">
             {RESUME_DATA.aiPractice.pitch}
           </p>
-          <dl className="mt-1 grid gap-x-8 gap-y-3 border-t border-foreground/25 pt-3 sm:grid-cols-2 print:border-foreground/50">
+          <dl className="border-foreground/25 print:border-foreground/50 mt-1 grid gap-x-8 gap-y-3 border-t pt-3 sm:grid-cols-2">
             {RESUME_DATA.aiPractice.highlights.map((item, i) => (
               <div key={item.title} className="flex gap-x-3">
                 <span
                   aria-hidden
-                  className="select-none pt-px font-mono text-[10px] font-medium leading-relaxed tracking-widest text-muted-foreground/60"
+                  className="text-muted-foreground/60 pt-px font-mono text-[10px] leading-relaxed font-medium tracking-widest select-none"
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="flex-1">
-                  <dt className="font-mono text-xs font-semibold text-foreground">
+                  <dt className="text-foreground font-mono text-xs font-semibold">
                     {item.title}
                   </dt>
-                  <dd className="mt-0.5 text-pretty font-mono text-xs leading-snug text-muted-foreground">
+                  <dd className="text-muted-foreground mt-0.5 font-mono text-xs leading-snug text-pretty">
                     {item.body}
                   </dd>
                 </div>
@@ -164,7 +163,7 @@ export default function Page() {
               <Card key={work.company}>
                 <CardHeader>
                   <div className="flex flex-col gap-y-1 text-base sm:flex-row sm:items-center sm:justify-between sm:gap-x-2">
-                    <h3 className="inline-flex flex-wrap items-center gap-x-1 gap-y-1 font-semibold leading-tight">
+                    <h3 className="inline-flex flex-wrap items-center gap-x-1 gap-y-1 leading-tight font-semibold">
                       <a className="hover:underline" href={work?.link || "#"}>
                         {work.company}
                       </a>
@@ -181,12 +180,12 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-xs tabular-nums text-gray-600 sm:text-sm sm:whitespace-nowrap">
+                    <div className="text-xs text-gray-600 tabular-nums sm:text-sm sm:whitespace-nowrap">
                       {work.start} - {work.end}
                     </div>
                   </div>
 
-                  <h4 className="font-mono text-sm font-medium italic leading-none">
+                  <h4 className="font-mono text-sm leading-none font-medium italic">
                     {work.title}
                   </h4>
                 </CardHeader>
@@ -199,14 +198,14 @@ export default function Page() {
                 })}
                 {work?.bulletPoints?.length && (
                   <>
-                    <h4 className="mt-3 font-mono text-sm font-semibold leading-none">
+                    <h4 className="mt-3 font-mono text-sm leading-none font-semibold">
                       Technical highlights:
                     </h4>
                     <CardBulletPoints className="mt-2">
                       {work.bulletPoints.map((bulletPoint, i) => {
                         return (
                           <li
-                            className="text-s mt-1 font-mono text-muted-foreground"
+                            className="text-s text-muted-foreground mt-1 font-mono"
                             key={i}
                           >
                             {bulletPoint}
@@ -227,10 +226,10 @@ export default function Page() {
               <Card key={education.school}>
                 <CardHeader>
                   <div className="flex flex-col gap-y-1 text-base sm:flex-row sm:items-center sm:justify-between sm:gap-x-2">
-                    <h3 className="font-semibold leading-tight">
+                    <h3 className="leading-tight font-semibold">
                       {education.school}
                     </h3>
-                    <div className="text-xs tabular-nums text-gray-600 sm:text-sm sm:whitespace-nowrap">
+                    <div className="text-xs text-gray-600 tabular-nums sm:text-sm sm:whitespace-nowrap">
                       {education.start} - {education.end}
                     </div>
                   </div>

@@ -59,10 +59,10 @@ export const CommandMenu = ({ links, resumeDownloadUrl }: Props) => {
           type="button"
           onClick={() => setOpen(true)}
           aria-label="Open command menu"
-          className="group fixed bottom-0 left-0 right-0 flex items-center justify-center gap-2 border-t border-t-muted bg-white/80 p-2 text-center text-sm text-muted-foreground backdrop-blur transition-colors hover:bg-muted/60 hover:text-foreground print:hidden"
+          className="group border-t-muted text-muted-foreground hover:bg-muted/60 hover:text-foreground fixed right-0 bottom-0 left-0 flex items-center justify-center gap-2 border-t bg-white/80 p-2 text-center text-sm backdrop-blur transition-colors print:hidden"
         >
           <span>Press</span>
-          <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground transition-colors group-hover:border-foreground/30 group-hover:text-foreground">
+          <kbd className="bg-muted text-muted-foreground group-hover:border-foreground/30 group-hover:text-foreground pointer-events-none inline-flex h-5 items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium transition-colors select-none">
             <span className="text-xxs">⌘/^</span>J
           </kbd>
           <span>or click here to open the command menu</span>
