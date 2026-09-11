@@ -2,6 +2,7 @@
 % Author: Kuldeep
 % My modified version of resume in LaTeX,
 % based on https://github.com/jakegut/resume
+% QR variant: ends with a scannable link to the live CV.
 % License : MIT
 %------------------------
 
@@ -28,6 +29,7 @@
 \usepackage{tabularx}
 \usepackage{changepage}
 \usepackage{atbegshi}
+\usepackage{qrcode}
 \usepackage[a4paper,margin=0.85in,footskip=0.0in]{geometry}
 \input{glyphtounicode}
 
@@ -242,6 +244,13 @@
 		% 	} \\
 	}}
 \end{itemize}
+
+%-----------QR CODE-----------
+\vspace{14pt}
+\begin{center}
+	\qrcode[height=2.4cm]{https://cv.kuldeep.tech/}\\[10pt]
+	{\scshape\small Scan to view online}
+\end{center}
 
 %-------------------------------------------
 
