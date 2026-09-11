@@ -1,0 +1,27 @@
+# Files in public/ are served by Workers Static Assets, so the headers() rules
+# in next.config.js do not apply to them. Static-asset headers belong here.
+
+# Immutable Next.js build assets
+/_next/static/*
+  Cache-Control: public,max-age=31536000,immutable
+
+/resume.pdf
+  Content-Disposition: inline; filename="Kuldeep-Parmar-Resume.pdf"
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/resume-qr.pdf
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/resume_0_sep01.pdf
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/resume_ai_0_jun13.pdf
+  Cache-Control: public, max-age=86400, must-revalidate
+
+# Security headers for static assets
+/*
+  X-DNS-Prefetch-Control: on
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

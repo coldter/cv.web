@@ -16,6 +16,9 @@ const nextConfig = {
     minimumCacheTTL: 60,
   },
 
+  // These rules apply to responses the Worker handles. Files in public/ are
+  // served by Workers Static Assets directly, so their headers live in
+  // public/_headers.
   async headers() {
     return [
       {
@@ -69,3 +72,6 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+// Enable OpenNext Cloudflare bindings during local development.
+import("@opennextjs/cloudflare").then((m) => m.initOpenNextCloudflareForDev());
