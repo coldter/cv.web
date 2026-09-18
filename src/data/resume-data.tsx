@@ -172,6 +172,24 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "Starwatch",
+      techStack: [
+        "TypeScript",
+        "Effect",
+        "Cloudflare Workers",
+        "Alchemy",
+        "D1",
+        "R2",
+        "React",
+      ],
+      description:
+        "Public search over any GitHub user's stars: full-text and optional semantic search over starred repos and their READMEs, with no login required.",
+      link: {
+        label: "starwatch.coldter.workers.dev",
+        href: "https://starwatch.coldter.workers.dev",
+      },
+    },
+    {
       title: "Slopnote RAG",
       techStack: ["AI SDK", "PG Vector", "Cloudflare Workers", "AI Gateway"],
       description:
